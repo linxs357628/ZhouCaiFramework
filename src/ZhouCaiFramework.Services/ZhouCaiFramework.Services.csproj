@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZhouCaiFramework.IServices\ZhouCaiFramework.IServices.csproj" />
+    <ProjectReference Include="..\ZhouCaiFramework.Model\ZhouCaiFramework.Model.csproj" />
+    <ProjectReference Include="..\ZhouCaiFramework.Common\ZhouCaiFramework.Common.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

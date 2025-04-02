@@ -1,0 +1,17 @@
+使用ASP.NET Core 6搭建通用框架，前后分离，api层和swagger 都需要区分文件夹（商家PC端:front,华旭科技总后管:admin）
+项目架构需要完成，包含以下组件：
+分层架构：Common, Model, IServices, Services, Web
+技术栈集成：
+MySQL + SqlSugar ORM
+Redis缓存
+Autofac依赖注入
+JWT认证
+Swagger API文档
+Mapster对象映射
+NLog日志系统
+配置文件：
+appsettings.json (数据库连接和JWT配置)
+nlog.config (日志配置)
+扩展方法：
+数据库和Redis配置
+JWT认证配置

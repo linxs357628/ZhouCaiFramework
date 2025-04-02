@@ -1,0 +1,318 @@
+2025-03-31 10:36:46.8430 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 10:36:46.8547 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 10:36:46.8547 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 10:36:46.8945 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 10:36:46.9100 Info Configuration initialized.
+2025-03-31 10:37:47.5545 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 10:37:47.5631 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 10:37:47.5631 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 10:37:47.5944 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 10:37:47.6049 Info Configuration initialized.
+2025-03-31 10:37:50.5341 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:00:02.3044 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:00:02.3131 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:00:02.3189 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:00:02.3380 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:00:02.3380 Info Configuration initialized.
+2025-03-31 11:00:05.3898 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:01:32.1036 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:01:32.1127 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:01:32.1182 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:01:32.1385 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:01:32.1501 Info Configuration initialized.
+2025-03-31 11:01:34.9534 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:36:59.5646 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:36:59.5735 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:36:59.5735 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:36:59.5985 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:36:59.6091 Info Configuration initialized.
+2025-03-31 11:37:02.4493 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:40:53.9853 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:40:53.9942 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:40:53.9942 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:40:54.0186 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:40:54.0284 Info Configuration initialized.
+2025-03-31 11:40:56.9159 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:45:17.4530 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:45:17.4619 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:45:17.4619 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:45:17.4967 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:45:17.5086 Info Configuration initialized.
+2025-03-31 11:45:20.4011 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:46:01.5646 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:46:01.5751 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:46:01.5751 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:46:01.5976 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:46:01.6076 Info Configuration initialized.
+2025-03-31 11:46:04.4390 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:47:58.8297 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:47:58.8389 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:47:58.8389 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:47:58.8648 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:47:58.8770 Info Configuration initialized.
+2025-03-31 11:48:01.6857 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:48:37.4176 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:48:37.4176 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:48:37.4303 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:48:37.4490 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:48:37.4603 Info Configuration initialized.
+2025-03-31 11:48:40.4013 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:53:18.0956 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 11:53:18.1060 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 11:53:18.1060 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 11:53:18.1333 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 11:53:18.1333 Info Configuration initialized.
+2025-03-31 11:53:20.9820 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:43:17.3542 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 14:43:17.3677 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 14:43:17.3677 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 14:43:17.4157 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:43:17.4375 Info Configuration initialized.
+2025-03-31 14:43:20.5175 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:46:30.5905 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 14:46:30.6024 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 14:46:30.6024 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 14:46:30.6367 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:46:30.6493 Info Configuration initialized.
+2025-03-31 14:46:33.6667 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:51:21.7800 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 14:51:21.7894 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 14:51:21.7894 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 14:51:21.8141 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 14:51:21.8245 Info Configuration initialized.
+2025-03-31 14:51:24.6555 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:02:07.5609 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:02:07.5716 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:02:07.5716 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:02:07.6105 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:02:07.6286 Info Configuration initialized.
+2025-03-31 15:02:10.7643 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:12:00.9497 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:12:00.9497 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:12:00.9623 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:12:00.9793 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:12:00.9793 Info Configuration initialized.
+2025-03-31 15:12:03.9334 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:23:07.3782 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:23:07.3915 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:23:07.3968 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:23:07.4191 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:23:07.4324 Info Configuration initialized.
+2025-03-31 15:23:10.5395 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:41:56.0670 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:41:56.0756 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:41:56.0756 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:41:56.1001 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:41:56.1001 Info Configuration initialized.
+2025-03-31 15:41:59.0670 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:45:59.8699 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:45:59.8811 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:45:59.8880 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:45:59.9132 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:45:59.9132 Info Configuration initialized.
+2025-03-31 15:46:02.9267 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:48:55.0351 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:48:55.0443 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:48:55.0443 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:48:55.0676 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:48:55.0788 Info Configuration initialized.
+2025-03-31 15:48:57.9699 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:53:43.7316 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-03-31 15:53:43.7419 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-03-31 15:53:43.7419 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-03-31 15:53:43.7644 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-03-31 15:53:43.7770 Info Configuration initialized.
+2025-03-31 15:53:46.7111 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 11:57:41.3537 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-01 11:57:41.3721 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-01 11:57:41.3721 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-01 11:57:41.4092 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 11:57:41.4251 Info Configuration initialized.
+2025-04-01 11:57:45.6932 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 15:13:06.2601 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-01 15:13:06.2989 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-01 15:13:06.3052 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-01 15:13:06.3301 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 15:13:06.3437 Info Configuration initialized.
+2025-04-01 15:13:10.1441 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 17:47:49.3654 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-01 17:47:49.3753 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-01 17:47:49.3753 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-01 17:47:49.4051 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-01 17:47:49.4174 Info Configuration initialized.
+2025-04-01 17:47:52.6793 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:38:33.9805 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 09:38:34.0117 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 09:38:34.0117 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 09:38:34.0374 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:38:34.0478 Info Configuration initialized.
+2025-04-02 09:38:37.9931 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:40:55.0503 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 09:40:55.0596 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 09:40:55.0596 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 09:40:55.0847 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:40:55.0847 Info Configuration initialized.
+2025-04-02 09:47:16.3496 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:48:46.0165 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 09:48:46.0259 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 09:48:46.0259 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 09:48:46.0491 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:48:46.0598 Info Configuration initialized.
+2025-04-02 09:51:06.1088 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 09:51:06.1187 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 09:51:06.1187 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 09:51:06.1475 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 09:51:06.1475 Info Configuration initialized.
+2025-04-02 10:01:28.8964 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:01:28.9068 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:01:28.9068 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:01:28.9206 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:01:28.9320 Info Configuration initialized.
+2025-04-02 10:01:31.2520 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:03:19.5198 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:03:19.5288 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:03:19.5288 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:03:19.5582 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:03:19.5711 Info Configuration initialized.
+2025-04-02 10:03:22.6090 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:05:31.7097 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:05:31.7223 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:05:31.7273 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:05:31.7630 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:05:31.7753 Info Configuration initialized.
+2025-04-02 10:05:34.8241 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:06:47.8901 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:06:47.8993 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:06:47.8993 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:06:47.9226 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:06:47.9341 Info Configuration initialized.
+2025-04-02 10:08:34.3991 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:09:17.8695 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:09:17.8789 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:09:17.8845 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:09:17.9039 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:09:17.9173 Info Configuration initialized.
+2025-04-02 10:09:20.9876 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:13:04.5908 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:13:04.6038 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:13:04.6038 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:13:04.6464 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:13:04.6615 Info Configuration initialized.
+2025-04-02 10:22:13.6161 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:22:13.6249 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:22:13.6249 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:22:13.6511 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:22:13.6692 Info Configuration initialized.
+2025-04-02 10:31:09.5865 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:31:09.5957 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:31:09.6032 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:31:09.6385 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:31:09.6493 Info Configuration initialized.
+2025-04-02 10:31:12.8984 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:34:10.6547 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:34:10.6651 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:34:10.6651 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:34:10.6913 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:34:10.7049 Info Configuration initialized.
+2025-04-02 10:34:13.8654 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:40:32.9539 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:40:32.9650 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:40:32.9650 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:40:32.9905 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:40:33.0144 Info Configuration initialized.
+2025-04-02 10:40:36.1654 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:45:53.7683 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:45:53.7793 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:45:53.7793 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:45:53.8106 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:45:53.8216 Info Configuration initialized.
+2025-04-02 10:45:57.0077 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:51:09.2278 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:51:09.2381 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:51:09.2465 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:51:09.2714 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:51:09.2862 Info Configuration initialized.
+2025-04-02 10:51:12.5322 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:53:06.7868 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:53:06.7972 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:53:06.7972 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:53:06.8251 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:53:06.8366 Info Configuration initialized.
+2025-04-02 10:53:20.9304 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:59:59.3220 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 10:59:59.3309 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 10:59:59.3354 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 10:59:59.3611 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 10:59:59.3758 Info Configuration initialized.
+2025-04-02 11:00:02.8127 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:01:15.5218 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:01:15.5323 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:01:15.5384 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:01:15.5666 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:01:15.5831 Info Configuration initialized.
+2025-04-02 11:01:19.0143 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:09:07.3749 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:09:07.3852 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:09:07.3852 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:09:07.4096 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:09:07.4214 Info Configuration initialized.
+2025-04-02 11:09:10.7499 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:11:53.5783 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:11:53.5877 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:11:53.5877 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:11:53.6128 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:11:53.6243 Info Configuration initialized.
+2025-04-02 11:12:24.8067 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:12:24.8160 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:12:24.8208 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:12:24.8392 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:12:24.8500 Info Configuration initialized.
+2025-04-02 11:12:28.1010 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:16.4666 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:14:16.4755 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:14:16.4755 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:14:16.4997 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:16.5167 Info Configuration initialized.
+2025-04-02 11:14:19.6631 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:31.5368 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:14:31.5463 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:14:31.5463 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:14:31.5715 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:31.5715 Info Configuration initialized.
+2025-04-02 11:14:34.8257 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:56.7030 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:14:56.7116 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:14:56.7116 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:14:56.7376 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:14:56.7491 Info Configuration initialized.
+2025-04-02 11:15:05.8408 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:15:18.1202 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:15:18.1351 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:15:18.1351 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:15:18.1629 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:15:18.1629 Info Configuration initialized.
+2025-04-02 11:16:40.8915 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:19:32.7956 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:19:32.8088 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:19:32.8088 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:19:32.8493 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:19:32.8609 Info Configuration initialized.
+2025-04-02 11:19:40.4267 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:22:28.4345 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:22:28.4435 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:22:28.4435 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:22:28.4694 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:22:28.4798 Info Configuration initialized.
+2025-04-02 11:22:31.8962 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:55:13.1135 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:55:13.1221 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:55:13.1221 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:55:13.1489 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:55:13.1633 Info Configuration initialized.
+2025-04-02 11:55:16.7751 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:56:54.4898 Info Registered target NLog.Targets.FileTarget(Name=logfile)
+2025-04-02 11:56:54.4995 Info Registered target NLog.Targets.ConsoleTarget(Name=console)
+2025-04-02 11:56:54.4995 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 11:56:54.5262 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
+2025-04-02 11:56:54.5262 Info Configuration initialized.
+2025-04-02 11:56:58.0824 Info Validating config: TargetNames=logfile, console, ConfigItems=28, FilePath=D:\m27\src\ZhouCaiFramework.Web\bin\Debug\net9.0\nlog.config
