@@ -7,15 +7,22 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     [ApiController]
     [Route("api/front/[controller]")]
     [Authorize]
-    public class FrontBaseController : ControllerBase
+    public class FrontBaseController : BaseController
     {
-        public readonly ISqlSugarClient _db;
-        public readonly ILogger<FrontBaseController> _logger;
-
-        public FrontBaseController(ISqlSugarClient db, ILogger<FrontBaseController> logger)
+        public FrontBaseController()
         {
-            _db = db;
-            _logger = logger;
+        }
+
+        public FrontBaseController(ILogger<FrontBaseController> logger) : base(logger)
+        {
+        }
+
+        public FrontBaseController(ISqlSugarClient db) : base(db)
+        {
+        }
+
+        public FrontBaseController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)
+        {
         }
     }
 }

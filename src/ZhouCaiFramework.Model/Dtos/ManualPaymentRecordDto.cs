@@ -22,7 +22,7 @@ namespace ZhouCaiFramework.Model.Dtos
         [StringLength(20, ErrorMessage = "货币类型长度不能超过 20 个字符")]
         public string CurrencyType { get; set; }
 
-        [Range(0.01, decimal.MaxValue, ErrorMessage = "付款金额必须大于 0")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "付款金额必须大于 0")]
         public decimal Amount { get; set; }
 
         [Required(ErrorMessage = "流水号不能为空")]

@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
@@ -6,15 +5,12 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
     public class TagController : AdminBaseController
     {
         private readonly ITagService _tagService;
 
         public TagController(ITagService tagService, ILogger<TagController> logger)
-            : base(null, logger)
+            : base(logger)
         {
             _tagService = tagService;
         }

@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
     /// <summary>
     /// 供应商订单管理
     /// </summary>
-    [ApiController]
-    [Route("api/admin/[controller]")]
+
     public class SupplyOrderController : AdminBaseController
     {
         public SupplyOrderController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)

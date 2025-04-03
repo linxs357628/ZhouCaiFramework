@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
     /// <summary>
     /// ²ÆÎñ
     /// </summary>
-    [ApiController]
-    [Route("api/admin/[controller]")]
+
     public class FinancialDataController : AdminBaseController
     {
         public FinancialDataController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)

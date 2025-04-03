@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using ZhouCaiFramework.Common;
@@ -8,16 +7,17 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 支付流水管理
+    /// </summary>
+
     public class PaymentFlowController : AdminBaseController
     {
         private readonly IPaymentService _paymentService;
 
         public PaymentFlowController(
             IPaymentService paymentService,
-            ILogger<PaymentFlowController> logger) : base(null, logger)
+            ILogger<PaymentFlowController> logger) : base(logger)
         {
             _paymentService = paymentService;
         }

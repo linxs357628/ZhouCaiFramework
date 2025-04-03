@@ -1,19 +1,19 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// ’æµ„Àÿ≤ƒπ‹¿Ì
+    /// </summary>
+
     public class SiteMaterialController : AdminBaseController
     {
         private readonly ISiteMaterialService _siteMaterialService;
 
         public SiteMaterialController(
             ISiteMaterialService siteMaterialService,
-            ILogger<SiteMaterialController> logger) : base(null, logger)
+            ILogger<SiteMaterialController> logger) : base(logger)
         {
             _siteMaterialService = siteMaterialService;
         }

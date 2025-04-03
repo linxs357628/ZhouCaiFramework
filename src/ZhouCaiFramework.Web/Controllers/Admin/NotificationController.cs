@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ZhouCaiFramework.IServices;
@@ -7,9 +6,10 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 通知管理
+    /// </summary>
+
     public class NotificationController : AdminBaseController
     {
         private readonly INotificationService _notificationService;
@@ -17,11 +17,16 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public NotificationController(
             INotificationService notificationService,
             ILogger<NotificationController> logger)
-            : base(null, logger)
+            : base(logger)
         {
             _notificationService = notificationService;
         }
 
+        /// <summary>
+        /// 创建草稿
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPost("draft")]
         public async Task<IActionResult> CreateDraft([FromBody] NotificationCreateDto dto)
         {
@@ -42,6 +47,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(result);
         }
 
+        /// <summary>
+        /// 发布通知
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPut("{id}/publish")]
         public async Task<IActionResult> Publish(int id)
         {
@@ -49,6 +59,12 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return success ? Ok() : BadRequest();
         }
 
+        /// <summary>
+        /// 更新通知
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] NotificationUpdateDto dto)
         {
@@ -70,6 +86,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return success ? Ok() : BadRequest();
         }
 
+        /// <summary>
+        /// 删除通知
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -77,6 +98,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return success ? Ok() : BadRequest();
         }
 
+        /// <summary>
+        /// 获取通知详情
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -106,6 +132,10 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(result);
         }
 
+        /// <summary>
+        /// 获取草稿列表
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("drafts")]
         public async Task<IActionResult> GetDrafts()
         {
@@ -113,6 +143,10 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(drafts);
         }
 
+        /// <summary>
+        /// 获取已发布列表
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("published")]
         public async Task<IActionResult> GetPublished()
         {
@@ -120,6 +154,10 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(published);
         }
 
+        /// <summary>
+        /// 获取可用的商户类型
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("merchant-types")]
         public async Task<IActionResult> GetMerchantTypes()
         {
@@ -127,6 +165,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(types);
         }
 
+        /// <summary>
+        /// 验证企业名称是否可用
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet("validate-enterprise")]
         public async Task<IActionResult> ValidateEnterpriseName([FromQuery] string name)
         {

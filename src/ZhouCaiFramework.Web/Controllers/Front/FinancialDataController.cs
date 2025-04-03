@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     /// <summary>
     /// 财务数据
     /// </summary>
-    [ApiController]
-    [Route("api/front/[controller]")]
+
     public class FinancialDataController : FrontBaseController
     {
         public FinancialDataController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)

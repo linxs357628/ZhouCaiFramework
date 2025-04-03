@@ -4,18 +4,28 @@ using SqlSugar;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
+    /// <summary>
+    /// AdminBaseController
+    /// </summary>
     [ApiController]
     [Route("api/admin/[controller]")]
-    [Authorize]
-    public class AdminBaseController : ControllerBase
+    [Authorize(Roles = "admin")]
+    public class AdminBaseController : BaseController
     {
-        public readonly ISqlSugarClient _db;
-        public readonly ILogger<AdminBaseController> _logger;
-
-        public AdminBaseController(ISqlSugarClient db, ILogger<AdminBaseController> logger)
+        public AdminBaseController()
         {
-            _db = db;
-            _logger = logger;
+        }
+
+        public AdminBaseController(ILogger<AdminBaseController> logger) : base(logger)
+        {
+        }
+
+        public AdminBaseController(ISqlSugarClient db) : base(db)
+        {
+        }
+
+        public AdminBaseController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)
+        {
         }
     }
 }

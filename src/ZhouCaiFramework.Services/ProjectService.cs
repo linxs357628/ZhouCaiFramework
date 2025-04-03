@@ -25,8 +25,8 @@ namespace ZhouCaiFramework.Services
         {
             var q = _db.Queryable<Project>()
                 .WhereIF(!string.IsNullOrEmpty(query.Keyword), p =>
-                    p.ProjectName.Contains(query.Keyword) ||
-                    p.ProjectNumber.Contains(query.Keyword) ||
+                    p.Name.Contains(query.Keyword) ||
+                    p.Number.Contains(query.Keyword) ||
                     p.Client.Contains(query.Keyword))
                 .WhereIF(!string.IsNullOrEmpty(query.Status), p =>
                     p.Status == query.Status);
@@ -41,8 +41,8 @@ namespace ZhouCaiFramework.Services
         {
             var project = new Project
             {
-                ProjectNumber = dto.ProjectNumber,
-                ProjectName = dto.ProjectName,
+                Number = dto.ProjectNumber,
+                Name = dto.ProjectName,
                 Location = dto.Location,
                 Client = dto.Client,
                 ContactPerson = dto.ContactPerson,
@@ -58,7 +58,7 @@ namespace ZhouCaiFramework.Services
             return await _db.Updateable<Project>()
                 .SetColumns(p => new Project
                 {
-                    ProjectName = dto.ProjectName,
+                    Name = dto.ProjectName,
                     Location = dto.Location,
                     ContactPerson = dto.ContactPerson,
                     Status = dto.Status

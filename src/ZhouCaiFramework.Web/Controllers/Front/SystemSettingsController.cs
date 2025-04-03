@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     /// <summary>
     /// œµÕ≥…Ë÷√
     /// </summary>
-    [ApiController]
-    [Route("api/front/[controller]")]
+
     public class SystemSettingsController : FrontBaseController
     {
         public SystemSettingsController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)

@@ -1,8 +1,13 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using ZhouCaiFramework.Common.Validations;
 
 namespace ZhouCaiFramework.Model.Dtos
 {
+    /// <summary>
+    /// 材料锁库记录查询条件DTO
+    /// 包含各种筛选条件和分页参数
+    /// </summary>
     public class MaterialQueryDto
     {
         [StringLength(100, ErrorMessage = "关键字长度不能超过 100 个字符")]
@@ -22,27 +27,28 @@ namespace ZhouCaiFramework.Model.Dtos
 
         public bool? IsListed { get; set; }
 
-        [StringLength(50, ErrorMessage = "状态长度不能超过 50 个字符")]
+        [RegularExpression("^(正常|停用)$", ErrorMessage = "状态必须为'正常'或'停用'")]
         public string Status { get; set; }
 
-        [StringLength(50, ErrorMessage = "周转状态长度不能超过 50 个字符")]
+        [RegularExpression("^(租赁中|闲置中)$", ErrorMessage = "周转状态必须为'租赁中'或'闲置中'")]
         public string RentalStatus { get; set; } // 周转状态: 租赁中/闲置中
 
-        [StringLength(50, ErrorMessage = "位置状态长度不能超过 50 个字符")]
+        [RegularExpression("^(在仓库|在工地|在途中)$", ErrorMessage = "位置状态必须为'在仓库','在工地'或'在途中'")]
         public string LocationStatus { get; set; } // 位置状态: 在仓库/在工地/在途中
 
-        public int? MerchantId { get; set; } // 所属商家ID
+        [Required(ErrorMessage = "所属商家ID不能为空")]
+        public int MerchantId { get; set; } // 所属商家ID
 
-        [Range(typeof(DateTime), "01/01/1900", "12/31/9999", ErrorMessage = "首次报告开始时间必须在有效范围内")]
+        [DateLessThan(nameof(FirstReportEnd), ErrorMessage = "首次报告开始时间不能晚于结束时间")]
         public DateTime? FirstReportStart { get; set; }
 
-        [Range(typeof(DateTime), "01/01/1900", "12/31/9999", ErrorMessage = "首次报告结束时间必须在有效范围内")]
+        [DateGreaterThan(nameof(FirstReportStart), ErrorMessage = "首次报告结束时间不能早于开始时间")]
         public DateTime? FirstReportEnd { get; set; }
 
-        [Range(typeof(DateTime), "01/01/1900", "12/31/9999", ErrorMessage = "上次报告开始时间必须在有效范围内")]
+        [DateLessThan(nameof(LastReportEnd), ErrorMessage = "上次报告开始时间不能晚于结束时间")]
         public DateTime? LastReportStart { get; set; }
 
-        [Range(typeof(DateTime), "01/01/1900", "12/31/9999", ErrorMessage = "上次报告结束时间必须在有效范围内")]
+        [DateGreaterThan(nameof(LastReportStart), ErrorMessage = "上次报告结束时间不能早于开始时间")]
         public DateTime? LastReportEnd { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "最小位置周期不能为负数")]

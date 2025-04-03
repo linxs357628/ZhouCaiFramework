@@ -1,20 +1,12 @@
 using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using Autofac.Extras.DynamicProxy;
-using FluentValidation;
-using FluentValidation.AspNetCore;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
-using NLog;
-using NLog.Web;
-using SqlSugar;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using ZhouCaiFramework.Common;
-using ZhouCaiFramework.IServices;
-using ZhouCaiFramework.Services;
-using ZhouCaiFramework.Web.Validators;
 
 namespace ZhouCaiFramework.Web
 {
@@ -40,6 +32,30 @@ namespace ZhouCaiFramework.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // 以下配置可以进一步自定义验证消息（非必需，但可用于排查问题）
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = context =>
+                {
+                    var errors = new Dictionary<string, string>();
+                    foreach (var modelState in context.ModelState)
+                    {
+                        if (modelState.Value.Errors.Count > 0)
+                        {
+                            errors[modelState.Key] = modelState.Value.Errors.First().ErrorMessage;
+                        }
+                    }
+
+                    return new BadRequestObjectResult(new
+                    {
+                        Success = false,
+                        Code = 400,
+                        Message = "请求参数错误",
+                        Data = errors
+                    });
+                };
+            });
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
@@ -92,11 +108,6 @@ namespace ZhouCaiFramework.Web
                         return false;
                 });
             });
-
-            // 注册 FluentValidation
-            services.AddFluentValidationAutoValidation();
-            services.AddFluentValidationClientsideAdapters();
-            services.AddValidatorsFromAssemblyContaining<LoginRequestValidator>();
 
             services.AddSqlSugarDatabase(Configuration);
             services.AddRedisCache(Configuration);

@@ -7,8 +7,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
     /// <summary>
     /// œµÕ≥…Ë÷√
     /// </summary>
-    [ApiController]
-    [Route("api/admin/[controller]")]
+
     public class SystemSettingsController : AdminBaseController
     {
         public SystemSettingsController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)

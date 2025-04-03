@@ -40,6 +40,8 @@ namespace ZhouCaiFramework.Model.Entities
         public string Roles { get; set; }
 
         public DateTime RegisterTime { get; set; }
+
+        [SugarColumn(IsNullable = true)]
         public DateTime? LastLoginTime { get; set; }
 
         [SugarColumn(Length = 50)]

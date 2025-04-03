@@ -13,8 +13,10 @@ namespace ZhouCaiFramework.Model.Entities
 
         public string Code { get; set; } // 材料码
 
-        public string Category { get; set; } // 类目
+        [SugarColumn(IsNullable = true)]
+        public int? CategoryId { get; set; } // 类目
 
+        public string Category { get; set; }
         public string Name { get; set; } // 品名
 
         public string Specification { get; set; } // 规格

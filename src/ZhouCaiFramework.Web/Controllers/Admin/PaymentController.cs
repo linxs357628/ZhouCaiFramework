@@ -1,20 +1,20 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 收款管理
+    /// </summary>
+
     public class PaymentController : AdminBaseController
     {
         private readonly IPaymentService _paymentService;
 
         public PaymentController(
             IPaymentService paymentService,
-            ILogger<PaymentController> logger) : base(null, logger)
+            ILogger<PaymentController> logger) : base(logger)
         {
             _paymentService = paymentService;
         }

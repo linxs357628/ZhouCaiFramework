@@ -1,49 +1,26 @@
-using System.Security.Claims;
-using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
-using ZhouCaiFramework.Web.Validators;
 
 namespace ZhouCaiFramework.Web.Controllers.Front
 {
-    [ApiController]
-    [Route("api/front/[controller]")]
     public class LoginController : FrontBaseController
     {
         private readonly IAuthService _authService;
-        private readonly IValidator<LoginRequest> _validator;
 
         public LoginController(
             IAuthService authService,
-            IValidator<LoginRequest> validator,
             ILogger<FrontBaseController> logger) : base(null, logger)
         {
             _authService = authService;
-            _validator = validator;
         }
 
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            // 验证请求参数
-            var validationResult = await _validator.ValidateAsync(request);
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(new
-                {
-                    Code = 400,
-                    Message = "参数验证失败",
-                    Errors = validationResult.Errors.Select(e => new
-                    {
-                        Field = e.PropertyName,
-                        Message = e.ErrorMessage
-                    })
-                });
-            }
-
             // 身份验证逻辑
             var (user, error) = await _authService.Authenticate(request.Username, request.Password);
             if (user == null)

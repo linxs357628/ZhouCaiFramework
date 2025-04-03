@@ -4,14 +4,16 @@ using ZhouCaiFramework.Model.Dtos;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [Route("api/admin/[controller]")]
+    /// <summary>
+    /// 材料管理控制器
+    /// </summary>
     public class MaterialManagementController : AdminBaseController
     {
         private readonly IMaterialService _materialService;
 
         public MaterialManagementController(
             IMaterialService materialService,
-            ILogger<AdminBaseController> logger) : base(null, logger)
+            ILogger<AdminBaseController> logger) : base(logger)
         {
             _materialService = materialService;
         }

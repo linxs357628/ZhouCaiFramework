@@ -11,10 +11,10 @@ namespace ZhouCaiFramework.Model.Entities
         public int Id { get; set; }
 
         [SugarColumn(Length = 50)]
-        public string ProjectNumber { get; set; }
+        public string Number { get; set; }
 
         [SugarColumn(Length = 100)]
-        public string ProjectName { get; set; }
+        public string Name { get; set; }
 
         [SugarColumn(Length = 200)]
         public string Location { get; set; }

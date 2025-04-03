@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     /// <summary>
     /// 工程项目
     /// </summary>
-    [ApiController]
-    [Route("api/front/[controller]")]
+
     public class EngineeringController : FrontBaseController
     {
         public EngineeringController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)

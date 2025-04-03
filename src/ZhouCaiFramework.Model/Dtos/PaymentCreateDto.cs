@@ -34,10 +34,10 @@ namespace ZhouCaiFramework.Model.Dtos
         public string EnterpriseLevel { get; set; }
 
         /// <summary>
-        /// 流水类型(income/expenditure)
+        /// 流水类型(1:收入/2:支出)
         /// </summary>
         [Required(ErrorMessage = "流水类型不能为空")]
-        [StringLength(20, ErrorMessage = "流水类型长度不能超过20个字符")]
+        [RegularExpression("^[12]$", ErrorMessage = "流水类型必须为1(收入)或2(支出)")]
         public string FlowType { get; set; }
 
         /// <summary>
@@ -79,10 +79,21 @@ namespace ZhouCaiFramework.Model.Dtos
         [StringLength(500, ErrorMessage = "备注长度不能超过500个字符")]
         public string Remark { get; set; }
 
+        [Range(0, int.MaxValue, ErrorMessage = "不含税金额不能为负数")]
         public int TaxExcludedAmount { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "税额不能为负数")] 
         public int TaxAmount { get; set; }
+
+        [Range(0, int.MaxValue, ErrorMessage = "总金额不能为负数")]
         public int TotalAmount { get; set; }
+
+        [Required(ErrorMessage = "付款方名称不能为空")]
+        [StringLength(100, ErrorMessage = "付款方名称长度不能超过100个字符")]
         public string PayerName { get; set; }
+
+        [Required(ErrorMessage = "收款方名称不能为空")]
+        [StringLength(100, ErrorMessage = "收款方名称长度不能超过100个字符")]
         public string ReceiverName { get; set; }
     }
 }

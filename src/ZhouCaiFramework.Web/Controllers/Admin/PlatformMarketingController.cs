@@ -4,10 +4,9 @@ using SqlSugar;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    ///
+    /// 平台营销管理
     /// </summary>
-    [ApiController]
-    [Route("api/admin/[controller]")]
+
     public class PlatformMarketingController : AdminBaseController
     {
         public PlatformMarketingController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)

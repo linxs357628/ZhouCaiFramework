@@ -49,5 +49,9 @@ namespace ZhouCaiFramework.Model.Entities
 
         [SugarColumn(IsNullable = true)]
         public DateTime? ArrivalTime { get; set; }
+        public int LockId { get; set; }
+        public decimal Quantity { get; set; }
+        public int PackageCount { get; set; }
+        public object Remark { get; set; }
     }
 }

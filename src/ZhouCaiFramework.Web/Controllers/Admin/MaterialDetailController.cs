@@ -1,78 +1,70 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 物料明细管理
+    /// </summary>
+
     public class MaterialDetailController : AdminBaseController
     {
-        private readonly IMaterialDetailService _materialDetailService;
+        private readonly IMaterialOutboundService _outboundService;
 
-        public MaterialDetailController(
-            IMaterialDetailService materialDetailService,
-            ILogger<MaterialDetailController> logger) : base(null, logger)
+        public MaterialDetailController(IMaterialOutboundService outboundService, ILogger<MaterialDetailController> logger) : base(logger)
         {
-            _materialDetailService = materialDetailService;
+            _outboundService = outboundService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetDetails(
-            int materialId,
-            [FromQuery] string keyword,
-            [FromQuery] List<string> categories,
-            [FromQuery] DateTime? startDate,
-            [FromQuery] DateTime? endDate,
-            [FromQuery] List<string> statuses,
-            [FromQuery] int? minDays,
-            [FromQuery] int? maxDays,
-            [FromQuery] int page = 1,
-            [FromQuery] int pageSize = 20)
+        /// <summary>
+        /// 获取物料明细
+        /// </summary>
+        /// <param name="outboundId"></param>
+        /// <returns></returns>
+        [HttpGet("{outboundId}")]
+        public async Task<IActionResult> GetMaterialDetails(int outboundId)
         {
-            var result = await _materialDetailService.GetDetails(
-                materialId,
-                keyword,
-                categories,
-                startDate,
-                endDate,
-                statuses,
-                minDays,
-                maxDays,
-                page,
-                pageSize);
-
-            return Ok(new
-            {
-                Total = result.TotalCount,
-                Items = result.Items.Select(x => new MaterialDetailDto
-                {
-                    MaterialCode = x.MaterialCode,
-                    Category = x.Category,
-                    MaterialName = x.MaterialName,
-                    Specification = x.Specification,
-                    Owner = x.Owner,
-                    IsPending = x.IsPending,
-                    IsMortgaged = x.IsMortgaged,
-                    CreateTime = x.CreateTime,
-                    LatestResult = x.LatestResult,
-                    Weight = x.Weight,
-                    Status = x.Status,
-                    CurrentLocation = x.CurrentLocation,
-                    LocationName = x.LocationName,
-                    LastReportTime = x.LastReportTime,
-                    LocationPeriod = x.LocationPeriod
-                })
-            });
+            var result = await _outboundService.GetMaterialDetailsAsync(outboundId);
+            return Ok(result);
         }
 
-        [HttpGet("{materialCode}/history")]
-        public async Task<IActionResult> GetHistory(string materialCode)
+        /// <summary>
+        /// 创建物料明细
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> CreateMaterialDetail([FromBody] MaterialDetailEditDto dto)
         {
-            var history = await _materialDetailService.GetMaterialHistory(materialCode);
-            return Ok(history);
+            var id = await _outboundService.CreateMaterialDetailAsync(dto);
+            return CreatedAtAction(nameof(GetMaterialDetails), new { outboundId = dto.LockId }, id);
+        }
+
+        /// <summary>
+        /// 更新物料明细
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateMaterialDetail(int id, [FromBody] MaterialDetailEditDto dto)
+        {
+            dto.Id = id;
+            var success = await _outboundService.UpdateMaterialDetailAsync(dto);
+            return success ? NoContent() : BadRequest();
+        }
+
+        /// <summary>
+        /// 删除物料明细
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMaterialDetail(int id)
+        {
+            var success = await _outboundService.DeleteMaterialDetailAsync(id);
+            return success ? NoContent() : BadRequest();
         }
     }
 }

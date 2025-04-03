@@ -59,7 +59,7 @@ namespace ZhouCaiFramework.Model.Dtos
         [StringLength(200, ErrorMessage = "规格长度不能超过 200 个字符")]
         public string Specification { get; set; }
 
-        [Range(0, decimal.MaxValue, ErrorMessage = "数量不能为负数")]
+        [Range(0, double.MaxValue, ErrorMessage = "数量不能为负数")]
         public decimal Quantity { get; set; }
 
         [StringLength(20, ErrorMessage = "单位长度不能超过 20 个字符")]

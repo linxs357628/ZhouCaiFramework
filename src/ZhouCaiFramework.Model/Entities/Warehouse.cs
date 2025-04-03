@@ -53,5 +53,6 @@ namespace ZhouCaiFramework.Model.Entities
         /// 创建时间，默认为当前时间
         /// </summary>
         public DateTime CreateTime { get; set; } = DateTime.Now;
+        public string Address { get; set; }
     }
 }

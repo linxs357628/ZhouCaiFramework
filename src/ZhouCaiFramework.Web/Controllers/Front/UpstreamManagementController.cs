@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     /// <summary>
     /// 上游管理
     /// </summary>
-    [ApiController]
-    [Route("api/front/[controller]")]
+
     public class UpstreamManagementController : FrontBaseController
     {
         public UpstreamManagementController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)

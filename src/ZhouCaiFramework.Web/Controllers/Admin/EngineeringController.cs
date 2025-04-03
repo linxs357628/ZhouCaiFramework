@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
     /// <summary>
     /// 工程管理
     /// </summary>
-    [ApiController]
-    [Route("api/admin/[controller]")]
+
     public class EngineeringController : AdminBaseController
     {
         public EngineeringController(ISqlSugarClient db, ILogger<AdminBaseController> logger) : base(db, logger)
@@ -22,7 +21,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public IActionResult GetOngoingFormworkProjects()
         {
             // TODO: Implement formwork projects (admin view)
-            return Ok(new[] { new { Id = 1, ProjectName = "Admin Formwork Project" } });
+            return Success(new[] { new { Id = 1, ProjectName = "Admin Formwork Project" } });
         }
 
         /// <summary>
@@ -33,7 +32,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public IActionResult GetOngoingScaffoldingProjects()
         {
             // TODO: Implement scaffolding projects (admin view)
-            return Ok(new[] { new { Id = 1, ProjectName = "Admin Scaffolding Project" } });
+            return Success(new[] { new { Id = 1, ProjectName = "Admin Scaffolding Project" } });
         }
     }
 }

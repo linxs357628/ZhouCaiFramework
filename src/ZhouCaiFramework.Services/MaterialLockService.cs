@@ -11,6 +11,10 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Services
 {
+    /// <summary>
+    /// 材料锁库服务实现
+    /// 提供材料锁库记录的相关业务操作
+    /// </summary>
     public class MaterialLockService : IMaterialLockService
     {
         private readonly ISqlSugarClient _db;
@@ -22,6 +26,11 @@ namespace ZhouCaiFramework.Services
             _logger = logger;
         }
 
+        /// <summary>
+        /// 获取材料锁库记录分页列表
+        /// </summary>
+        /// <param name="query">查询条件</param>
+        /// <returns>分页的锁库记录列表</returns>
         public async Task<PaginatedList<MaterialLockDto>> GetMaterialLocksAsync(MaterialLockQueryDto query)
         {
             try
@@ -35,7 +44,7 @@ namespace ZhouCaiFramework.Services
                 // 关键词搜索
                 if (!string.IsNullOrEmpty(query.Keyword))
                 {
-                    q = q.Where((ml, m, p, w, e) => 
+                    q = q.Where((ml, m, p, w, e) =>
                         ml.DocumentNo.Contains(query.Keyword) ||
                         p.Name.Contains(query.Keyword) ||
                         m.Name.Contains(query.Keyword) ||
@@ -136,6 +145,11 @@ namespace ZhouCaiFramework.Services
             }
         }
 
+        /// <summary>
+        /// 获取指定锁库记录的材料明细
+        /// </summary>
+        /// <param name="lockId">锁库记录ID</param>
+        /// <returns>材料明细列表</returns>
         public async Task<List<MaterialDetailDto>> GetMaterialDetailsAsync(int lockId)
         {
             try
@@ -152,6 +166,11 @@ namespace ZhouCaiFramework.Services
             }
         }
 
+        /// <summary>
+        /// 切换锁库状态
+        /// </summary>
+        /// <param name="lockId">锁库记录ID</param>
+        /// <returns>是否切换成功</returns>
         public async Task<bool> ToggleLockStatusAsync(int lockId)
         {
             try
@@ -164,7 +183,7 @@ namespace ZhouCaiFramework.Services
                     return false;
 
                 // 切换锁库状态
-                var newStatus = lockRecord.PlanTime > DateTime.Now ? 
+                var newStatus = lockRecord.PlanTime > DateTime.Now ?
                     "已解锁" : "已锁定";
 
                 return await _db.Updateable<MaterialLock>()

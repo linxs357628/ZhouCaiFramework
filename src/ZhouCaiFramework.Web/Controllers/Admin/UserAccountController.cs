@@ -1,16 +1,14 @@
-using FluentValidation;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
 using ZhouCaiFramework.Model.Entities;
-using ZhouCaiFramework.Web.Validators;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 用户账号管理
+    /// </summary>
+
     public class UserAccountController : AdminBaseController
     {
         private readonly IUserAccountService _userAccountService;
@@ -18,7 +16,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public UserAccountController(
             IUserAccountService userAccountService,
             ILogger<UserAccountController> logger,
-            IHttpContextAccessor httpContextAccessor) : base(null, logger)
+            IHttpContextAccessor httpContextAccessor) : base(logger)
         {
             _userAccountService = userAccountService;
         }
@@ -133,22 +131,8 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
 
         [HttpPost]
         public async Task<IActionResult> Create(
-            [FromBody] UserAccountCreateDto dto,
-            [FromServices] UserAccountCreateDtoValidator validator)
+            [FromBody] UserAccountCreateDto dto)
         {
-            var validationResult = await validator.ValidateAsync(dto);
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(new
-                {
-                    Success = false,
-                    Errors = validationResult.Errors.Select(e => new
-                    {
-                        Field = e.PropertyName,
-                        Message = e.ErrorMessage
-                    })
-                });
-            }
             var user = new User
             {
                 Username = dto.Username,

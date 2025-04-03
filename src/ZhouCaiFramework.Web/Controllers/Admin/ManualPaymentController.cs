@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
@@ -6,20 +5,26 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 管理端手动支付记录相关接口
+    /// </summary>
+
     public class ManualPaymentController : AdminBaseController
     {
         private readonly IManualPaymentService _paymentService;
 
         public ManualPaymentController(
             IManualPaymentService paymentService,
-            ILogger<ManualPaymentController> logger) : base(null, logger)
+            ILogger<ManualPaymentController> logger) : base(logger)
         {
             _paymentService = paymentService;
         }
 
+        /// <summary>
+        /// 创建手动支付记录
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateManualPaymentRecordDto dto)
         {
@@ -47,6 +52,12 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(result);
         }
 
+        /// <summary>
+        /// 更新手动支付记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateManualPaymentRecordDto dto)
         {
@@ -75,6 +86,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(result);
         }
 
+        /// <summary>
+        /// 删除手动支付记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -82,6 +98,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return success ? Ok() : BadRequest();
         }
 
+        /// <summary>
+        /// 获取手动支付记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -93,6 +114,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             return Ok(record);
         }
 
+        /// <summary>
+        /// 获取手动支付记录列表
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <returns></returns>
         [HttpGet("project/{projectId}")]
         public async Task<IActionResult> GetByProject(int projectId)
         {

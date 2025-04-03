@@ -1,10 +1,22 @@
-﻿using System;
+﻿﻿﻿﻿﻿﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ZhouCaiFramework.Model.Dtos
 {
+    /// <summary>
+    /// 材料库存数据传输对象
+    /// </summary>
     public class MaterialInventoryDto
     {
+        [Required(ErrorMessage = "物料ID不能为空")]
+        public int MaterialId { get; set; }
+
+        [Required(ErrorMessage = "所属商家ID不能为空")]
+        public int MerchantId { get; set; }
+
+        [Required(ErrorMessage = "单位不能为空")]
+        [StringLength(20, ErrorMessage = "单位长度不能超过20个字符")]
+        public string Unit { get; set; }
         [Required(ErrorMessage = "类别不能为空")]
         [StringLength(50, ErrorMessage = "类别长度不能超过 50 个字符")]
         public string Category { get; set; }

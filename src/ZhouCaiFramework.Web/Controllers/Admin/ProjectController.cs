@@ -1,19 +1,19 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 项目管理
+    /// </summary>
+
     public class ProjectController : AdminBaseController
     {
         private readonly IProjectService _projectService;
 
         public ProjectController(
             IProjectService projectService,
-            ILogger<ProjectController> logger) : base(null, logger)
+            ILogger<ProjectController> logger) : base(logger)
         {
             _projectService = projectService;
         }

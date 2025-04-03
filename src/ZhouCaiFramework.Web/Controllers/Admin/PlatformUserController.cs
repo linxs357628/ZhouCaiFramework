@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
@@ -6,15 +5,16 @@ using ZhouCaiFramework.Model.Entities;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 平台用户管理
+    /// </summary>
+
     public class PlatformUserController : AdminBaseController
     {
         private readonly IPlatformUserService _platformUserService;
 
         public PlatformUserController(IPlatformUserService platformUserService, ILogger<PlatformUserController> logger)
-            : base(null, logger)
+            : base(logger)
         {
             _platformUserService = platformUserService;
         }

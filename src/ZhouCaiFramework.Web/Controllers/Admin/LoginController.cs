@@ -1,53 +1,39 @@
-using System.Reflection;
-using System.Security.Claims;
-using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SqlSugar;
+using System.Reflection;
+using System.Security.Claims;
 using ZhouCaiFramework.Common;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
-using ZhouCaiFramework.Web.Validators;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
+    /// <summary>
+    /// 登录
+    /// </summary>
+
     public class LoginController : AdminBaseController
     {
         private readonly IAuthService _authService;
-        private readonly IValidator<LoginRequest> _validator;
 
         public LoginController(
             ISqlSugarClient db,
             IAuthService authService,
-            IValidator<LoginRequest> validator,
             ILogger<AdminBaseController> logger) : base(db, logger)
         {
             _authService = authService;
-            _validator = validator;
         }
 
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            // 验证请求参数
-            var validationResult = await _validator.ValidateAsync(request);
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(new
-                {
-                    Code = 400,
-                    Message = "参数验证失败",
-                    Errors = validationResult.Errors.Select(e => new
-                    {
-                        Field = e.PropertyName,
-                        Message = e.ErrorMessage
-                    })
-                });
-            }
-
             // 管理员身份验证
             var (user, error) = await _authService.AuthenticateAdmin(request.Username, request.Password);
             if (user == null)
@@ -70,19 +56,21 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             await _authService.StoreRefreshToken(user.Id, refreshToken);
             _logger.LogInformation("管理员 {Username} 登录成功", user.Username);
 
-            return Ok(new
+            return Success(new
             {
-                Code = 200,
-                Message = "登录成功",
-                Data = new
-                {
-                    AccessToken = accessToken,
-                    RefreshToken = refreshToken,
-                    ExpiresIn = 120 * 60 // 120分钟
-                }
-            });
+                AccessToken = accessToken,
+                RefreshToken = refreshToken,
+                ExpiresIn = 120 * 60 // 120分钟
+            },
+                "登录成功"
+            );
         }
 
+        /// <summary>
+        /// 刷新令牌
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         [HttpPost("refresh")]
         [AllowAnonymous]
         public async Task<IActionResult> Refresh(string token)
@@ -95,35 +83,41 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                     Unauthorized(error);
             }
 
-            return Ok(new
+            return Success(new
             {
-                Code = 200,
-                Message = "令牌刷新成功",
-                Data = new
-                {
-                    AccessToken = newAccessToken,
-                    RefreshToken = newRefreshToken,
-                    ExpiresIn = 120 * 60 // 120分钟
-                }
-            });
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken,
+                ExpiresIn = 120 * 60 // 120分钟
+            },
+                "令牌刷新成功"
+            );
         }
 
+        /// <summary>
+        /// 注销
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
         [HttpPost("revoke")]
         public async Task<IActionResult> Revoke(string token)
         {
             var success = await _authService.RevokeRefreshToken(token);
             return success ?
-                Ok(new { Code = 200, Message = "令牌已注销" }) :
-                BadRequest(new { Code = 400, Message = "无效的令牌" });
+                Success(success, "令牌注销成功") :
+                BadRequest<bool>("无效的令牌");
         }
 
+        /// <summary>
+        /// 初始化数据库
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("InitDatabase")]
         [AllowAnonymous]
         public async Task<IActionResult> InitDatabase()
         {
             var list = Assembly.Load("ZhouCaiFramework.Model").GetTypes().Where(u => u.IsClass && u.Namespace == "ZhouCaiFramework.Model.Entities").ToArray();
             _db.InitDatabase(types: list);
-            return Ok(new { Code = 200, Message = "数据库初始化成功" });
+            return Success(true, "数据库初始化成功");
         }
     }
 }

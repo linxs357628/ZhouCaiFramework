@@ -2,6 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ZhouCaiFramework.Model.Dtos
 {
+    /// <summary>
+    /// 材料响应数据传输对象
+    /// 包含材料的完整信息和状态
+    /// </summary>
     public class MaterialResponseDto
     {
         [Range(1, int.MaxValue, ErrorMessage = "材料 ID 必须为正整数")]
@@ -53,15 +57,15 @@ namespace ZhouCaiFramework.Model.Dtos
         public bool IsListed { get; set; } // 挂单状态
 
         [Required(ErrorMessage = "材料状态不能为空")]
-        [StringLength(20, ErrorMessage = "材料状态长度不能超过 20 个字符")]
+        [RegularExpression("^(良品|报废)$", ErrorMessage = "材料状态必须为'良品'或'报废'")]
         public string Status { get; set; } // 材料状态(良品/报废)
 
         [Required(ErrorMessage = "周转状态不能为空")]
-        [StringLength(20, ErrorMessage = "周转状态长度不能超过 20 个字符")]
+        [RegularExpression("^(租赁中|闲置中)$", ErrorMessage = "周转状态必须为'租赁中'或'闲置中'")]
         public string RentalStatus { get; set; } // 周转状态(租赁中/闲置中)
 
         [Required(ErrorMessage = "位置状态不能为空")]
-        [StringLength(20, ErrorMessage = "位置状态长度不能超过 20 个字符")]
+        [RegularExpression("^(在仓库|在工地|在途中)$", ErrorMessage = "位置状态必须为'在仓库','在工地'或'在途中'")]
         public string LocationStatus { get; set; } // 位置状态(在仓库/在工地/在途中)
 
         [Range(0, int.MaxValue, ErrorMessage = "位置周期不能为负数")]
@@ -93,6 +97,10 @@ namespace ZhouCaiFramework.Model.Dtos
         public string MainImage { get; set; } // 主图URL
     }
 
+    /// <summary>
+    /// 材料统计数据传输对象
+    /// 包含材料的各种统计信息
+    /// </summary>
     public class MaterialStatsDto
     {
         // 总量统计

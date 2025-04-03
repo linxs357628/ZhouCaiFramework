@@ -1,24 +1,35 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ZhouCaiFramework.IServices;
 using ZhouCaiFramework.Model.Dtos;
 
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
-    [ApiController]
-    [Route("api/admin/[controller]")]
-    [Authorize(Roles = "admin")]
+    /// <summary>
+    /// 物料库存
+    /// </summary>
+
     public class MaterialInventoryController : AdminBaseController
     {
         private readonly IMaterialInventoryService _materialService;
 
         public MaterialInventoryController(
             IMaterialInventoryService materialService,
-            ILogger<MaterialInventoryController> logger) : base(null, logger)
+            ILogger<MaterialInventoryController> logger) : base(logger)
         {
             _materialService = materialService;
         }
 
+        /// <summary>
+        /// 获取物料库存
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <param name="orderTypes"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="paymentStatus"></param>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetInventory(
             [FromQuery] string keyword,

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using ZhouCaiFramework.Common.Validations;
 
 namespace ZhouCaiFramework.Model.Dtos
 {
@@ -16,11 +17,13 @@ namespace ZhouCaiFramework.Model.Dtos
         /// <summary>
         /// 开始时间
         /// </summary>
+        [DateLessThan(nameof(EndTime), ErrorMessage = "开始时间不能晚于结束时间")]
         public DateTime? StartTime { get; set; }
 
         /// <summary>
         /// 结束时间
         /// </summary>
+        [DateGreaterThan(nameof(StartTime), ErrorMessage = "结束时间不能早于开始时间")]
         public DateTime? EndTime { get; set; }
 
         /// <summary>
@@ -36,10 +39,16 @@ namespace ZhouCaiFramework.Model.Dtos
         public decimal? MaxAmount { get; set; }
 
         /// <summary>
-        /// 流水类型(income/expenditure)
+        /// 流水类型(1:收入/2:支出)
         /// </summary>
-        [StringLength(20, ErrorMessage = "流水类型长度不能超过20个字符")]
+        [RegularExpression("^[12]$", ErrorMessage = "流水类型必须为1(收入)或2(支出)")]
         public string FlowType { get; set; }
+
+        /// <summary>
+        /// 状态(0:待审核/1:已通过/2:已拒绝)
+        /// </summary>
+        [RegularExpression("^[012]$", ErrorMessage = "状态必须为0(待审核)/1(已通过)/2(已拒绝)")]
+        public string Status { get; set; }
 
         /// <summary>
         /// 业务类型

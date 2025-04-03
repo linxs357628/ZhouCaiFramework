@@ -6,8 +6,7 @@ namespace ZhouCaiFramework.Web.Controllers.Front
     /// <summary>
     ///供应链管理
     /// </summary>
-    [ApiController]
-    [Route("api/front/[controller]")]
+
     public class SupplyChainController : FrontBaseController
     {
         public SupplyChainController(ISqlSugarClient db, ILogger<FrontBaseController> logger) : base(db, logger)
