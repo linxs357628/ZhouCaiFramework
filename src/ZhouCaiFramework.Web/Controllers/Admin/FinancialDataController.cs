@@ -4,7 +4,7 @@ using SqlSugar;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ²ÆÎñ
+    /// ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class FinancialDataController : AdminBaseController
@@ -14,25 +14,25 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡ÉÌ»§½»Ò×Ã÷Ï¸
+        /// ï¿½ï¿½È¡ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <returns></returns>
         [HttpGet("merchant-transactions")]
         public IActionResult GetMerchantTransactions()
         {
             // TODO: Implement merchant transaction details
-            return Ok(new[] { new { Id = 1, Merchant = "Company A", Amount = 5000 } });
+            return Success(new[] { new { Id = 1, Merchant = "Company A", Amount = 5000 } });
         }
 
         /// <summary>
-        /// »ñÈ¡ÈÕ½»Ò×Ã÷Ï¸
+        /// ï¿½ï¿½È¡ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <returns></returns>
         [HttpGet("daily-details")]
         public IActionResult GetDailyTransactionDetails()
         {
             // TODO: Implement daily transaction details
-            return Ok(new[] { new { Date = "2025-03-31", Income = 10000, Expense = 3000 } });
+            return Success(new[] { new { Date = "2025-03-31", Income = 10000, Expense = 3000 } });
         }
     }
 }

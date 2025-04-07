@@ -4,7 +4,7 @@ using SqlSugar;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// 平台营销管理
+    /// 平台营锟斤拷锟斤拷锟斤拷
     /// </summary>
 
     public class PlatformMarketingController : AdminBaseController
@@ -17,21 +17,21 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public IActionResult GetAdvertisements()
         {
             // TODO: Implement advertisement management
-            return Ok(new[] { new { Id = 1, Title = "Promotion 1" } });
+            return Success(new[] { new { Id = 1, Title = "Promotion 1" } });
         }
 
         [HttpGet("leads")]
         public IActionResult GetLeads()
         {
             // TODO: Implement lead management
-            return Ok(new[] { new { Id = 1, Company = "Lead Company" } });
+            return Success(new[] { new { Id = 1, Company = "Lead Company" } });
         }
 
         [HttpGet("notifications")]
         public IActionResult GetNotifications()
         {
             // TODO: Implement notification records
-            return Ok(new[] { new { Id = 1, Message = "System Update" } });
+            return Success(new[] { new { Id = 1, Message = "System Update" } });
         }
     }
 }

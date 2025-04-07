@@ -5,7 +5,7 @@ using ZhouCaiFramework.Model.Dtos;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ÏµÍ³ÉèÖÃ
+    /// ÏµÍ³ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class SystemSettingsController : AdminBaseController
@@ -15,18 +15,18 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡ËùÓÐÔ±¹¤ÕËºÅ
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ëºï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("employee-accounts")]
         public IActionResult GetEmployeeAccounts()
         {
             // TODO: Implement employee account management
-            return Ok(new[] { new { Id = 1, Username = "admin1" } });
+            return Success(new[] { new { Id = 1, Username = "admin1" } });
         }
 
         /// <summary>
-        /// Ìí¼ÓÔ±¹¤ÕËºÅ
+        /// ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ëºï¿½
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -34,7 +34,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public IActionResult AddEmployee([FromBody] AddEmployeeRequest request)
         {
             // TODO: Implement add employee
-            return Ok(new { Success = true, Message = "Employee added" });
+            return Success(new { Success = true, Message = "Employee added" });
         }
     }
 }

@@ -88,7 +88,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             enterprise.Grade = dto.Grade;
 
             var success = await _enterpriseService.Update(enterprise);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -100,7 +100,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Disable(int id)
         {
             var success = await _enterpriseService.Disable(id);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _enterpriseService.Delete(id);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -126,7 +126,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var enterprise = await _enterpriseService.GetById(id);
             if (enterprise == null)
             {
-                return NotFound();
+                return NotFound<EnterpriseDetailDto>();
             }
 
             var result = new EnterpriseDetailDto
@@ -234,7 +234,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             };
 
             var success = await _enterpriseService.UpdateWarehouse(warehouse);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<SharedWarehouse>();
         }
 
         /// <summary>
@@ -247,7 +247,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> RemoveWarehouse(int enterpriseId, int warehouseId)
         {
             var success = await _enterpriseService.RemoveWarehouse(warehouseId);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var enterprise = await _enterpriseService.GetById(enterpriseId);
             if (enterprise == null)
             {
-                return NotFound();
+                return NotFound<string>();
             }
 
             return Success(enterprise.Warehouses);

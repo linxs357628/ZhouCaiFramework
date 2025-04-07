@@ -43,7 +43,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 });
             }
 
-            return Ok(result);
+            return Success(result);
         }
 
         private async Task<bool> SyncToFinanceSystem(PaymentCreateDto dto)
@@ -61,7 +61,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetPayments([FromQuery] PaymentQuery query)
         {
             var result = await _paymentService.GetPayments(query);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpGet("export")]
@@ -75,7 +75,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> LinkInvoice(int paymentId, [FromBody] InvoiceLinkDto dto)
         {
             var result = await _paymentService.LinkInvoice(paymentId, dto);
-            return Ok(result);
+            return Success(result);
         }
     }
 }

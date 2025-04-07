@@ -25,7 +25,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             };
 
             var result = await _tagService.Create(tag);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPut("{id}")]
@@ -34,56 +34,56 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var tag = await _tagService.GetById(id);
             if (tag == null)
             {
-                return NotFound();
+                return NotFound<Tag>();
             }
 
             tag.Name = dto.Name;
             tag.Color = dto.Color;
 
             var success = await _tagService.Update(tag);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id, [FromQuery] bool confirm)
         {
             var success = await _tagService.Delete(id, confirm);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpPut("{id}/disable")]
         public async Task<IActionResult> Disable(int id)
         {
             var success = await _tagService.Disable(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpPut("{id}/visibility")]
         public async Task<IActionResult> SetVisibility(int id, [FromBody] TagVisibilityDto dto)
         {
             var success = await _tagService.ToggleVisibility(id, dto.IsHidden);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var tag = await _tagService.GetById(id);
-            return tag != null ? Ok(tag) : NotFound();
+            return tag != null ? Success(tag) : NotFound<Tag>();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var tags = await _tagService.GetAll();
-            return Ok(tags);
+            return Success(tags);
         }
 
         [HttpGet("visible")]
         public async Task<IActionResult> GetVisible()
         {
             var tags = await _tagService.GetVisibleTags();
-            return Ok(tags);
+            return Success(tags);
         }
     }
 }

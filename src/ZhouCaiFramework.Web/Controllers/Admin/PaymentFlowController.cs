@@ -1,3 +1,4 @@
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using ZhouCaiFramework.Common;
@@ -23,15 +24,12 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         [HttpPost]
-        public async Task<ActionResult<PaymentFlow>> CreatePaymentFlow(
+        public async Task<IActionResult> CreatePaymentFlow(
             [FromBody] PaymentCreateDto dto)
         {
             try
             {
-                var flow = new PaymentFlow
-                {
-                    // ...省略现有代码...
-                };
+                var flow = dto.Adapt<PaymentFlow>();
 
                 var result = await _paymentService.CreatePaymentFlowAsync(flow);
                 return CreatedAtAction(nameof(GetFlowDetail), new { id = result.Id }, result);
@@ -39,28 +37,28 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             catch (Exception ex)
             {
                 _logger.LogError(ex, "创建支付流水失败");
-                return StatusCode(500, new ApiResponse(false, "创建支付流水失败"));
+                return Fail<IActionResult>("创建支付流水失败");
             }
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<PaymentFlow>> GetFlowDetail(
+        public async Task<IActionResult> GetFlowDetail(
             [Range(1, int.MaxValue)] int id)
         {
             try
             {
                 var flow = await _paymentService.GetFlowDetailAsync(id);
-                return flow != null ? Ok(flow) : NotFound();
+                return flow != null ? Success(flow) : NotFound<PaymentFlow>();
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "获取流水详情失败");
-                return StatusCode(500, new ApiResponse(false, "获取流水详情失败"));
+                return Fail<PaymentFlow>("获取流水详情失败");
             }
         }
 
         [HttpGet("query")]
-        public async Task<ActionResult<PaginatedList<PaymentFlow>>> QueryFlows(
+        public async Task<IActionResult> QueryFlows(
             [FromQuery] PaymentQuery query)
         {
             try
@@ -78,29 +76,17 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                     query.PageIndex,
                     query.PageSize);
 
-                return new PaginatedList<PaymentFlow>(
+                return Success(new PaginatedList<PaymentFlow>(
                     records.ToList(),
                     totalCount,
                     query.PageIndex,
-                    query.PageSize);
+                    query.PageSize));
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "查询支付流水失败");
-                return StatusCode(500, new ApiResponse(false, "查询支付流水失败"));
+                return Fail<PaginatedList<PaymentFlow>>("查询支付流水失败");
             }
-        }
-    }
-
-    public class ApiResponse
-    {
-        public bool Success { get; set; }
-        public string Message { get; set; }
-
-        public ApiResponse(bool success, string message)
-        {
-            Success = success;
-            Message = message;
         }
     }
 }

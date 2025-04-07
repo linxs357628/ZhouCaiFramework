@@ -52,7 +52,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var employee = await _employeeService.GetEmployee(id);
             if (employee == null)
             {
-                return NotFound();
+                return NotFound<bool>();
             }
 
             employee.Name = dto.Name;
@@ -60,7 +60,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             employee.Role = dto.Role;
 
             var success = await _employeeService.UpdateEmployee(employee);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Disable(int id)
         {
             var success = await _employeeService.DisableEmployee(id);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _employeeService.DeleteEmployee(id);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> AssignRole(int id, [FromBody] RoleAssignDto dto)
         {
             var success = await _employeeService.AssignRole(id, dto.Role);
-            return success ? Success(success) : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Get(int id)
         {
             var employee = await _employeeService.GetEmployee(id);
-            return employee != null ? Success(employee) : NotFound();
+            return employee != null ? Success(employee) : NotFound<Employee>();
         }
 
         /// <summary>

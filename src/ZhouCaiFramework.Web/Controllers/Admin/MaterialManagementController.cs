@@ -25,7 +25,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterials([FromQuery] MaterialQueryDto query)
         {
             var result = await _materialService.GetMaterialsAsync(query);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var material = await _materialService.GetMaterialDetailAsync(id);
             if (material == null)
             {
-                return NotFound();
+                return NotFound<MaterialResponseDto>();
             }
-            return Ok(material);
+            return Success(material);
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialStats([FromQuery] MaterialQueryDto query)
         {
             var stats = await _materialService.GetMaterialStatsAsync(query);
-            return Ok(stats);
+            return Success(stats);
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetActiveCategories()
         {
             var categories = await _materialService.GetActiveCategoriesAsync();
-            return Ok(categories);
+            return Success(categories);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetActiveSubCategories(string category)
         {
             var subCategories = await _materialService.GetActiveSubCategoriesAsync(category);
-            return Ok(subCategories);
+            return Success(subCategories);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialHistory(int materialId)
         {
             var history = await _materialService.GetMaterialHistoryAsync(materialId);
-            return Ok(history);
+            return Success(history);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialImages(int materialId)
         {
             var images = await _materialService.GetMaterialImagesAsync(materialId);
-            return Ok(images);
+            return Success(images);
         }
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 new UploadImageDto { MaterialId = materialId, Description = description },
                 stream,
                 file.FileName);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> DeleteMaterialImage(int imageId)
         {
             var result = await _materialService.DeleteMaterialImageAsync(imageId);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> UpdateMaterialImage(int imageId, [FromBody] UpdateImageDto dto)
         {
             var result = await _materialService.UpdateMaterialImageAsync(imageId, dto);
-            return Ok(result);
+            return Success(result);
         }
     }
 }

@@ -2,10 +2,20 @@ using SqlSugar;
 
 namespace ZhouCaiFramework.Model.Entities
 {
+    public enum UserType
+    {
+        Normal = 0,
+        Platform = 1
+    }
+
     /// <summary>
-    /// ÓÃ»§
+    /// ï¿½Ã»ï¿½
     /// </summary>
     public class User
+    {
+        [SugarColumn]
+        public UserType Type { get; set; } = UserType.Normal;
+
     {
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }

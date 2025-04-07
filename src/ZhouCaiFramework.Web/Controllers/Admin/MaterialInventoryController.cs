@@ -5,7 +5,7 @@ using ZhouCaiFramework.Model.Dtos;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ÎïÁÏ¿â´æ
+    /// ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½
     /// </summary>
 
     public class MaterialInventoryController : AdminBaseController
@@ -20,7 +20,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡ÎïÁÏ¿â´æ
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½
         /// </summary>
         /// <param name="keyword"></param>
         /// <param name="orderTypes"></param>
@@ -49,7 +49,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 page,
                 pageSize);
 
-            return Ok(new
+            return Success(new
             {
                 Total = result.TotalCount,
                 Items = result.Items.Select(x => new MaterialInventoryDto

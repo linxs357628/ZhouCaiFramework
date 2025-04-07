@@ -26,8 +26,8 @@ namespace ZhouCaiFramework.Web.Controllers.Front
             if (user == null)
             {
                 return string.IsNullOrEmpty(error) ?
-                    Unauthorized() :
-                    Unauthorized(error);
+                    Unauthorized<bool>() :
+                    Unauthorized<bool>(error);
             }
 
             var claims = new List<Claim>

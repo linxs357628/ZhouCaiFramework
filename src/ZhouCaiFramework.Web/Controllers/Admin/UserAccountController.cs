@@ -47,14 +47,14 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 Logs = await _userAccountService.GetUserLogs(id)
             };
 
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpGet("enterprise/{enterpriseId}")]
         public async Task<IActionResult> GetByEnterprise(int enterpriseId)
         {
             var users = await _userAccountService.GetByEnterprise(enterpriseId);
-            return Ok(users.Select(x => new UserAccountSimpleDto
+            return Success(users.Select(x => new UserAccountSimpleDto
             {
                 Id = x.Id,
                 Username = x.Username,
@@ -150,7 +150,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 new { Username = user.Username, Phone = user.Phone },
                 "成功"
             );
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPut("{id}")]
@@ -178,7 +178,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 },
                 success ? "成功" : "失败"
             );
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpPut("{id}/disable")]
@@ -193,7 +193,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 success ? "成功" : "失败",
                 true // 标记为危险操作
             );
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpPut("{id}/transfer")]
@@ -213,7 +213,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 success ? "成功" : "失败",
                 true // 标记为危险操作
             );
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpPut("{id}/unlink")]
@@ -228,7 +228,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 success ? "成功" : "失败",
                 true // 标记为危险操作
             );
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest();
         }
 
         [HttpPut("{id}/link")]
@@ -247,14 +247,14 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 },
                 success ? "成功" : "失败"
             );
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         [HttpGet("{id}/logs")]
         public async Task<IActionResult> GetLogs(int id)
         {
             var logs = await _userAccountService.GetUserLogs(id);
-            return Ok(logs);
+            return Success(logs);
         }
     }
 }

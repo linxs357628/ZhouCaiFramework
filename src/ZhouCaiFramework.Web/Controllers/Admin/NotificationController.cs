@@ -7,7 +7,7 @@ using ZhouCaiFramework.Model.Entities;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// Í¨Öª¹ÜÀí
+    /// Í¨Öªï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class NotificationController : AdminBaseController
@@ -23,7 +23,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// ´´½¨²Ý¸å
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Ý¸ï¿½
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
@@ -44,11 +44,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             };
 
             var result = await _notificationService.CreateDraft(notification);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// ·¢²¼Í¨Öª
+        /// ï¿½ï¿½ï¿½ï¿½Í¨Öª
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -56,11 +56,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Publish(int id)
         {
             var success = await _notificationService.Publish(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest();
         }
 
         /// <summary>
-        /// ¸üÐÂÍ¨Öª
+        /// ï¿½ï¿½ï¿½ï¿½Í¨Öª
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dto"></param>
@@ -83,11 +83,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             notification.Tags = JsonConvert.SerializeObject(dto.Tags);
 
             var success = await _notificationService.Update(notification);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest();
         }
 
         /// <summary>
-        /// É¾³ýÍ¨Öª
+        /// É¾ï¿½ï¿½Í¨Öª
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -95,11 +95,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _notificationService.Delete(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest();
         }
 
         /// <summary>
-        /// »ñÈ¡Í¨ÖªÏêÇé
+        /// ï¿½ï¿½È¡Í¨Öªï¿½ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -129,44 +129,44 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
                 Creator = notification.Creator
             };
 
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// »ñÈ¡²Ý¸åÁÐ±í
+        /// ï¿½ï¿½È¡ï¿½Ý¸ï¿½ï¿½Ð±ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("drafts")]
         public async Task<IActionResult> GetDrafts()
         {
             var drafts = await _notificationService.GetDrafts();
-            return Ok(drafts);
+            return Success(drafts);
         }
 
         /// <summary>
-        /// »ñÈ¡ÒÑ·¢²¼ÁÐ±í
+        /// ï¿½ï¿½È¡ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("published")]
         public async Task<IActionResult> GetPublished()
         {
             var published = await _notificationService.GetPublished();
-            return Ok(published);
+            return Success(published);
         }
 
         /// <summary>
-        /// »ñÈ¡¿ÉÓÃµÄÉÌ»§ÀàÐÍ
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("merchant-types")]
         public async Task<IActionResult> GetMerchantTypes()
         {
             var types = await _notificationService.GetAvailableMerchantTypes();
-            return Ok(types);
+            return Success(types);
         }
 
         /// <summary>
-        /// ÑéÖ¤ÆóÒµÃû³ÆÊÇ·ñ¿ÉÓÃ
+        /// ï¿½ï¿½Ö¤ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -174,7 +174,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> ValidateEnterpriseName([FromQuery] string name)
         {
             var isValid = await _notificationService.ValidateEnterpriseName(name);
-            return Ok(new { IsValid = isValid });
+            return Success(new { IsValid = isValid });
         }
     }
 }

@@ -39,8 +39,8 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             if (user == null)
             {
                 return string.IsNullOrEmpty(error) ?
-                    Unauthorized() :
-                    Unauthorized(error);
+                    Unauthorized<bool>() :
+                    Unauthorized<bool>(error);
             }
 
             var claims = new List<Claim>
@@ -79,8 +79,8 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             if (string.IsNullOrEmpty(newAccessToken))
             {
                 return string.IsNullOrEmpty(error) ?
-                    Unauthorized() :
-                    Unauthorized(error);
+                    Unauthorized<bool>() :
+                    Unauthorized<bool>(error);
             }
 
             return Success(new

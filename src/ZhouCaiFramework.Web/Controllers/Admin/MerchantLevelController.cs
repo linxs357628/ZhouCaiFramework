@@ -6,7 +6,7 @@ using ZhouCaiFramework.Model.Entities;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// 商户等级管理
+    ///
     /// </summary>
 
     public class MerchantLevelController : AdminBaseController
@@ -20,7 +20,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// 创建商户等级
+        /// 锟斤拷锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
@@ -35,11 +35,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             };
 
             var result = await _merchantLevelService.Create(level);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// 更新商户等级
+        /// 锟斤拷锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dto"></param>
@@ -58,11 +58,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             level.Permissions = dto.Permissions;
 
             var success = await _merchantLevelService.Update(level);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// 启用、禁用商户等级
+        /// 锟斤拷锟矫★拷锟斤拷锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -70,11 +70,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Disable(int id)
         {
             var success = await _merchantLevelService.Disable(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// 删除商户等级
+        /// 删锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -82,11 +82,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _merchantLevelService.Delete(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// 获取商户等级
+        /// 锟斤拷取锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -94,22 +94,22 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Get(int id)
         {
             var level = await _merchantLevelService.GetById(id);
-            return level != null ? Ok(level) : NotFound();
+            return level != null ? Success(level) : NotFound<MerchantLevel>();
         }
 
         /// <summary>
-        /// 获取所有商户等级
+        /// 锟斤拷取锟斤拷锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var levels = await _merchantLevelService.GetAll();
-            return Ok(levels);
+            return Success(levels);
         }
 
         /// <summary>
-        /// 获取指定商户类型的所有商户等级
+        /// 锟斤拷取指锟斤拷锟教伙拷锟斤拷锟酵碉拷锟斤拷锟斤拷锟教伙拷锟饺硷拷
         /// </summary>
         /// <param name="enterpriseType"></param>
         /// <returns></returns>
@@ -117,7 +117,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetByEnterpriseType(string enterpriseType)
         {
             var levels = await _merchantLevelService.GetByEnterpriseType(enterpriseType);
-            return Ok(levels);
+            return Success(levels);
         }
     }
 }

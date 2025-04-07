@@ -4,7 +4,7 @@ using ZhouCaiFramework.IServices;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ÏîÄ¿¹ÜÀí
+    /// ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class ProjectController : AdminBaseController
@@ -22,14 +22,14 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetProject(int id)
         {
             var project = await _projectService.GetProject(id);
-            return Ok(project);
+            return Success(project);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetProjects([FromQuery] ProjectQuery query)
         {
             var result = await _projectService.GetProjects(query);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPost]
@@ -44,56 +44,56 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         {
             dto.Id = id;
             var result = await _projectService.UpdateProject(dto);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProject(int id)
         {
             var result = await _projectService.DeleteProject(id);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPost("{projectId}/entry")]
         public async Task<IActionResult> AddEntryRecord(int projectId, [FromBody] ProjectOperationDto dto)
         {
             var result = await _projectService.AddEntryRecord(projectId, dto);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPost("{projectId}/withdrawal")]
         public async Task<IActionResult> AddWithdrawalRecord(int projectId, [FromBody] ProjectOperationDto dto)
         {
             var result = await _projectService.AddWithdrawalRecord(projectId, dto);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPost("{projectId}/inventory")]
         public async Task<IActionResult> AddInventoryRecord(int projectId, [FromBody] ProjectOperationDto dto)
         {
             var result = await _projectService.AddInventoryRecord(projectId, dto);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPost("{projectId}/suspension")]
         public async Task<IActionResult> AddSuspensionRecord(int projectId, [FromBody] ProjectOperationDto dto)
         {
             var result = await _projectService.AddSuspensionRecord(projectId, dto);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPut("{projectId}/progress")]
         public async Task<IActionResult> UpdateProgressQuantity(int projectId, [FromBody] string quantity)
         {
             var result = await _projectService.UpdateProgressQuantity(projectId, quantity);
-            return Ok(result);
+            return Success(result);
         }
 
         [HttpPut("{projectId}/payment")]
         public async Task<IActionResult> UpdatePaymentStatus(int projectId, [FromBody] PaymentUpdateDto dto)
         {
             var result = await _projectService.UpdatePaymentStatus(projectId, dto);
-            return Ok(result);
+            return Success(result);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             };
 
             var result = await _paymentService.CreateAsync(record);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var record = await _paymentService.GetByIdAsync(id);
             if (record == null)
             {
-                return NotFound();
+                return NotFound<bool>();
             }
 
             record.PaymentType = dto.PaymentType;
@@ -83,7 +83,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             record.Remark = dto.Remark;
 
             var result = await _paymentService.UpdateAsync(record);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _paymentService.DeleteAsync(id);
-            return success ? Ok() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
@@ -109,9 +109,9 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
             var record = await _paymentService.GetByIdAsync(id);
             if (record == null)
             {
-                return NotFound();
+                return NotFound<ManualPaymentRecord>();
             }
-            return Ok(record);
+            return Success(record);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetByProject(int projectId)
         {
             var records = await _paymentService.GetByProjectAsync(projectId);
-            return Ok(records);
+            return Success(records);
         }
     }
 }

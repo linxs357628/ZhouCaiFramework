@@ -5,7 +5,7 @@ using ZhouCaiFramework.Model.Dtos;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ËØ²Ä·ÖÀà¿ØÖÆÆ÷
+    /// ï¿½Ø²Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class MaterialCategoryController : AdminBaseController
@@ -18,7 +18,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡ËØ²Ä·ÖÀàÁÐ±í
+        /// ï¿½ï¿½È¡ï¿½Ø²Ä·ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
@@ -26,11 +26,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetCategories([FromQuery] MaterialCategoryQueryDto query)
         {
             var result = await _categoryService.GetCategoriesAsync(query);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// »ñÈ¡µ¥¸öËØ²Ä·ÖÀà
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ø²Ä·ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -38,22 +38,22 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetCategory(int id)
         {
             var result = await _categoryService.GetCategoryAsync(id);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// »ñÈ¡ËùÓÐ¸¸¼¶·ÖÀà
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("parents")]
         public async Task<IActionResult> GetParentCategories()
         {
             var result = await _categoryService.GetParentCategoriesAsync();
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// ´´½¨ËØ²Ä·ÖÀà
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Ø²Ä·ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
@@ -65,7 +65,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// ¸üÐÂËØ²Ä·ÖÀà
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½Ø²Ä·ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dto"></param>
@@ -75,11 +75,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         {
             dto.Id = id;
             var success = await _categoryService.UpdateCategoryAsync(dto);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// ÇÐ»»ËØ²Ä·ÖÀàµÄ¿É¼ûÐÔ
+        /// ï¿½Ð»ï¿½ï¿½Ø²Ä·ï¿½ï¿½ï¿½Ä¿É¼ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -87,11 +87,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> ToggleVisibility(int id)
         {
             var success = await _categoryService.ToggleVisibilityAsync(id);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// É¾³ýËØ²Ä·ÖÀà
+        /// É¾ï¿½ï¿½ï¿½Ø²Ä·ï¿½ï¿½ï¿½
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -99,7 +99,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> DeleteCategory(int id)
         {
             var success = await _categoryService.DeleteCategoryAsync(id);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
     }
 }

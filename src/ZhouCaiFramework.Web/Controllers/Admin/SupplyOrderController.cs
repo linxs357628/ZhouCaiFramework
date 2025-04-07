@@ -4,7 +4,7 @@ using SqlSugar;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ¹©Ó¦ÉÌ¶©µ¥¹ÜÀí
+    /// ï¿½ï¿½Ó¦ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class SupplyOrderController : AdminBaseController
@@ -14,36 +14,36 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡Ñ¯¼Û¶©µ¥
+        /// ï¿½ï¿½È¡Ñ¯ï¿½Û¶ï¿½ï¿½ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("inquiry-orders")]
         public IActionResult GetInquiryOrders()
         {
             // TODO: Implement inquiry orders
-            return Ok(new[] { new { Id = 1, InquiryNo = "INQ-ADMIN-001" } });
+            return Success(new[] { new { Id = 1, InquiryNo = "INQ-ADMIN-001" } });
         }
 
         /// <summary>
-        /// »ñÈ¡¹©Ó¦ÉÌ¿â´æ
+        /// ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½Ì¿ï¿½ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("lessor-inventory")]
         public IActionResult GetLessorInventory()
         {
             // TODO: Implement lessor inventory
-            return Ok(new[] { new { Id = 1, Lessor = "Company A", Material = "Scaffolding" } });
+            return Success(new[] { new { Id = 1, Lessor = "Company A", Material = "Scaffolding" } });
         }
 
         /// <summary>
-        /// »ñÈ¡×ªÒÆ¶©µ¥
+        /// ï¿½ï¿½È¡×ªï¿½Æ¶ï¿½ï¿½ï¿½
         /// </summary>
         /// <returns></returns>
         [HttpGet("transfer-orders")]
         public IActionResult GetTransferOrders()
         {
             // TODO: Implement transfer orders
-            return Ok(new[] { new { Id = 1, OrderNo = "TRF-001" } });
+            return Success(new[] { new { Id = 1, OrderNo = "TRF-001" } });
         }
     }
 }

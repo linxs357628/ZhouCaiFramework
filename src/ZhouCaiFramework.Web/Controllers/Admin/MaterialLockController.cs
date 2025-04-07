@@ -26,7 +26,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialLocks([FromQuery] MaterialLockQueryDto query)
         {
             var result = await _materialLockService.GetMaterialLocksAsync(query);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialDetails(int lockId)
         {
             var result = await _materialLockService.GetMaterialDetailsAsync(lockId);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> ToggleLockStatus(int lockId)
         {
             var success = await _materialLockService.ToggleLockStatusAsync(lockId);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
     }
 }

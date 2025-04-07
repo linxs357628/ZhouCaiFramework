@@ -5,7 +5,7 @@ using ZhouCaiFramework.Model.Dtos;
 namespace ZhouCaiFramework.Web.Controllers.Admin
 {
     /// <summary>
-    /// ÎïÁÏÃ÷Ï¸¹ÜÀí
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½
     /// </summary>
 
     public class MaterialDetailController : AdminBaseController
@@ -18,7 +18,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// »ñÈ¡ÎïÁÏÃ÷Ï¸
+        /// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <param name="outboundId"></param>
         /// <returns></returns>
@@ -26,11 +26,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> GetMaterialDetails(int outboundId)
         {
             var result = await _outboundService.GetMaterialDetailsAsync(outboundId);
-            return Ok(result);
+            return Success(result);
         }
 
         /// <summary>
-        /// ´´½¨ÎïÁÏÃ÷Ï¸
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         }
 
         /// <summary>
-        /// ¸üÐÂÎïÁÏÃ÷Ï¸
+        /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dto"></param>
@@ -52,11 +52,11 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         {
             dto.Id = id;
             var success = await _outboundService.UpdateMaterialDetailAsync(dto);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
 
         /// <summary>
-        /// É¾³ýÎïÁÏÃ÷Ï¸
+        /// É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -64,7 +64,7 @@ namespace ZhouCaiFramework.Web.Controllers.Admin
         public async Task<IActionResult> DeleteMaterialDetail(int id)
         {
             var success = await _outboundService.DeleteMaterialDetailAsync(id);
-            return success ? NoContent() : BadRequest();
+            return success ? Success(success) : BadRequest<bool>();
         }
     }
 }
