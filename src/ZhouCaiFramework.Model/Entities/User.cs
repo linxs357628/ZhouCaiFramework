@@ -16,7 +16,6 @@ namespace ZhouCaiFramework.Model.Entities
         [SugarColumn]
         public UserType Type { get; set; } = UserType.Normal;
 
-    {
         [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
